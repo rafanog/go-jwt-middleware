@@ -57,7 +57,7 @@ type JWTMiddleware struct {
 }
 
 func OnError(w http.ResponseWriter, r *http.Request, err string) {
-	http.Error(w, err, http.StatusUnauthorized)
+	http.Error(w, err, http.StatusForbidden)
 }
 
 // New constructs a new Secure instance with supplied options.
